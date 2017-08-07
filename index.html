@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+<head>
+<title></title>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="css/css_main.css" />
+
+</head>
+<body onresize="resizer()">
+<div  data-role="page" >
+	<div data-role="header" data-theme="b" id="cl" data-position="fixed">
+		<div class="ui-grid-a">
+			<a href="#dvMenu" id="btnM" style="margin-left:5px" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-nodisc-icon"></a>
+			<span style="margin-left: 25px">Festival Nac del Maíz</span>
+			<a href="#dvPersonalMenu" id="btnM" style="float:right; margin-right: 8px" class="ui-btn ui-icon-user ui-btn-icon-notext ui-nodisc-icon"></a>
+		</div>
+	</div>
+	<div role="main" id="dvMain" class="ui-content" style="padding:10px">
+		
+		<div id="x" class="cAdvice">
+			<img src="img/advice1.jpg" width="100%" />
+			<div class="cAdviceText">
+				<label style="font-size:1.2em; font-family:times; font-style: italic; font-weight: bold;">Inaguracion Festival del Maiz</label>
+				<label style="font-family:arial">Comienzan las festividades en el marco del festival del maiz en Danli</label>
+			</div>
+		</div>
+
+		<div id="x" class="cAdvice">
+			<img src="img/advice2.jpg" width="100%" />
+			<div class="cAdviceText">
+				<label style="font-size:1.2em; font-family:times; font-style: italic; font-weight: bold;">Desfile Inagural</label>
+				<label style="font-family:arial">Desfile con las escuelas y colegios de la zona.</label>
+			</div>
+		</div>
+
+		<div id="x" class="cAdvice">
+			<img src="img/advice3.jpg" width="100%" />
+			<div class="cAdviceText">
+				<label style="font-size:1.2em; font-family:times; font-style: italic; font-weight: bold;">Eleccion Reina Festima 2017</label>
+				<label style="font-family:arial">Eleccion de la reina juvenil del festival del maiz.</label>
+			</div>
+		</div>
+
+	</div>
+	<div data-role="panel" id="dvMenu" data-display="push" data-position="left" data-theme="b">
+		<ul data-role="listview">
+            <li data-icon="false">
+                <a href="#" style="width:70%" onclick="switchMenu(1, 'Sales Operation-BOC',0,0)"><h3>Home</h3></a>
+                <a href="#" style="width:15%; margin:1px; height:40px; float:right; border:0px; align:right" class="ui-btn ui-icon-delete ui-icon-notext" data-rel="close" data-target="#dvMenu"></a>
+            </li>
+            <li data-icon="false"><a href="#" class="ui-btn ui-icon-heart ui-btn-icon-left" onclick="switchMenu(5, 'KPIs Favorites',0,0)">My Favorite</a></li>
+            <li data-icon="false"><a href="#" class="ui-btn ui-icon-tag ui-btn-icon-left" onclick="switchMenu(4, 'KPIs by SubChannel',0,0)">KPIs by SubChannel</a></li>
+            <li data-icon="false"><a href="#" class="ui-btn ui-icon-location ui-btn-icon-left" onclick="switchMenu(7, 'KPIs by Zones',0,0)">KPIs by Zones</a></li>
+            <li data-icon="false"><a href="#" class="ui-btn ui-icon-location ui-btn-icon-left" onclick="switchMenu(7, 'KPIs by Zones',0,0)">KPIs by Zones</a></li>
+            <li data-icon="false"><a href="#" class="ui-btn ui-icon-location ui-btn-icon-left" onclick="switchMenu(8, 'KPIs by Map',0,0)">KPIs by Map</a></li>
+            <!--<li data-role="collapsible" data-iconpos="right" data-inset="false" data-shadow="false">
+                <h2>Star</h2>
+                <ul data-role="listview">
+                    <li><a href="#">Grs DTH Pos</a></li>
+                </ul>
+            </li>-->
+        </ul>
+	</div>
+
+	<div data-role="panel" id="dvPersonalMenu" data-display="push" data-position="right" data-theme="b">
+		Panel menu
+	</div>
+</div>
+</body>
+<!--<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+
+resizer();
+
+function resizer(){
+	var w =  $(window).width()-20;
+	var h = $(window).height();
+
+	$(".cAdvice img").css({'height': w*0.6 + 'px'});
+	console.log(w);
+
+}
+
+
+</script>
+
+</html>
